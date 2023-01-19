@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+	<head>
+		<title>Tutorial 4.4.2 Recorrido de &aacute;rboles</title>
+		<!--[if lt IE 9]>
+			<script src="../js/corrector.js"></script>
+		<![endif]-->
+		<meta name="description" content="p&aacute;gina tutorial del tema 4.4.2: recorrido de &aacute;rboles para el semestre 2016-1" />
+		<meta name="keywords" content="tutorial,FI, UNAM, anchura, profundidad, 2016-1, ingenieria,estructuras, discretas, arboles, facultad" />
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="../css/detalles.css" />
+		<!--[if lt IE 8]>
+			<link rel="stylesheet" type="text/css" href="../css/especial.css" />
+		<![endif]-->
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+	</head>
+
+	<body>
+		<div id="header_container">  
+			<div id="header">
+				<div id="banner">
+					<h1><span>4.4.2 </span>Recorrido de &aacute;rboles</h1>
+				</div>
+				<div id="banner_slogan">
+					<h2>Estructuras Discretas</h2>
+				</div>
+				<div id="menubar">
+					<ul id="menu">
+						<li><a href="principal.html">Inicio</a></li>
+						<li CLASS="current"><a href="tutorial.html">Tutorial</a></li>
+						<li><a href="ejercicios.html">Ejercicios</a></li>
+						<li><a href="cuestionario.html">Cuestionario</a></li>
+						<li><a href="bibliografia.html">Bibliograf&iacute;a</a></li>
+						<li><a href="multimedia.html">Multimedia</a></li>
+						<li>
+							<audio controls>
+								<source src="../music/1.mp3" type="audio/mp3"/>
+							</audio>
+							<!--[if lt IE 9]>
+								<embed autostart="false" src="../music/1.mp3" height=16 width=100></embed>
+							<![endif]-->
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="main">
+			<div id="site_content">	
+				<div id="content2">
+					<br/><h1>Definiciones</h1>	
+					<p class="tutorial">
+						&Aacute;rbol:
+						<ul class="tutorialul">
+							<li>Un &aacute;rbol se define como un grafo dirigido ac&iacute;clico en el que todos los nodos tienen grado de entrado 1 (excepto el de grado cero), y grado de salida cero o mayor que cero. </li>
+						</ul>
+					</p>
+					<p class="tutorial">
+						Ra&iacute;z:
+						<ul class="tutorialul">
+							<li>Se le denomina ra&iacute;z al &uacute;nico nodo de un &aacute;rbol que tiene grado de entrada cero.</li>
+						</ul>
+					</p>
+					<p class="tutorial">
+						Hoja:
+						<ul class="tutorialul">
+							<li>Se le denomina hoja a cualquier nodo de un &aacute;rbol con grado de salida cero.</li>
+						</ul>
+					</p>	
+					<p class="tutorial">
+						Camino:
+						<ul class="tutorialul">
+							<li>Se le define como camino a una sucesi&oacute;n de nodos en un &aacute;rbol n1,2,...,nk, tal que el i-&eacute;simo es padre del i+1, y longitud de camino como el n&uacute;mero de nodo menos uno ( n&uacute;mero de aristas). </li>
+							<li>De esta definici&oacute;n se deriva que existe un camino de longitud cero desde un nodo a s&iacute; mismo (sucesi&oacute;n de un s&oacute;lo elemento). </li>
+						</ul>
+					</p>
+					<p class="tutorial">
+						Ancestros y descendientes:
+						<ul class="tutorialul">
+							<li>El nodo n(i) se denomina ancestro de n(j) si existe un camino desde el primero al segundo. Asimismo, en este caso, n(j) tambi&eacute;n se denomina descendiente del primero.</li>
+						</ul>
+					</p>	
+					<p class="tutorial">
+						Sub&aacute;rbol:
+						<ul class="tutorialul">
+							<li>Se define el sub&aacute;rbol de un nodo como el &aacute;rbol compuesto por ese nodo y todos sus descendientes.</li>
+						</ul>
+					</p>
+					<p class="tutorial">
+						Altura:
+						<ul class="tutorialul">
+							<li>Se define la altura de un nodo como la longitud del camino ´&aacute;s largo desde esde nodo a cualquier hoja. Adem&aacute;s, se dfine la altura de un &aacute;rbol como la altura de la ra&iacute;z.</li>
+						</ul>
+					</p>
+					<p class="tutorial">
+						Profundidad:
+						<ul class="tutorialul">
+							<li>Se define la profundidad de un nodo como la longitud del &uacute;nico camino que existe entre ese nodo y la ra&iacute;z.</li>
+						</ul>
+					</p>
+					<p class="tutorial">
+						Niveles:
+						<ul class="tutorialul">
+							<li>Dado un &aacute;rbol de altura h, se definen h+1 niveles (desde 0 a h), donde el nivel i es el conjunto de nodos que est&aacute; a profundidad i.</li>
+						</ul>
+					</p>
+
+				<a href="tutorial.html" class="button">Tutorial<i class="icon-chevron-right"></i></a>
+			</div> 
+		</div>
+		<div id="footer_container">     
+			<div id="footer">
+				<p>P&aacute;gina creada por V&iacute;ctor Molina Alba en el semestre 2016-1, Facultad de Ingenier&iacute;a, UNAM.</p>
+			</div>
+		</div> 
+	</body>
+</html>

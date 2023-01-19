@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+	<head>
+		<title>Tutorial 4.4.2 Recorrido de &aacute;rboles</title>
+		<!--[if lt IE 9]>
+			<script src="../js/corrector.js"></script>
+		<![endif]-->
+		<meta name="description" content="p&aacute;gina tutorial del tema 4.4.2: recorrido de &aacute;rboles para el semestre 2016-1" />
+		<meta name="keywords" content="tutorial,FI, UNAM, anchura, profundidad, 2016-1, ingenieria,estructuras, discretas, arboles, facultad" />
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="../css/detalles.css" />
+		<!--[if lt IE 8]>
+			<link rel="stylesheet" type="text/css" href="../css/especial.css" />
+		<![endif]-->
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/canvasjs.min.js"></script>
+	</head>
+	<body>
+		<div id="header_container">  
+			<div id="header">
+				<div id="banner">
+					<h1><span>4.4.2 </span>Recorrido de &aacute;rboles</h1>
+				</div>
+				<div id="banner_slogan">
+					<h2>Estructuras Discretas</h2>
+				</div>
+				<div id="menubar">
+					<ul id="menu">
+						<li><a href="principal.html">Inicio</a></li>
+						<li CLASS="current"><a href="tutorial.html">Tutorial</a></li>
+						<li><a href="ejercicios.html">Ejercicios</a></li>
+						<li><a href="cuestionario.html">Cuestionario</a></li>
+						<li><a href="bibliografia.html">Bibliograf&iacute;a</a></li>
+						<li><a href="multimedia.html">Multimedia</a></li>
+						<li>
+							<audio controls>
+								<source src="../music/1.mp3" type="audio/mp3"/>
+							</audio>
+							<!--[if lt IE 9]>
+								<embed autostart="false" src="../music/1.mp3" height=16 width=100></embed>
+							<![endif]-->
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="main">
+			<div id="site_content">	
+				<div id="content2">
+					<br/><h1>Recorridos en profundidad</h1>	
+					<!--[if !IE]>
+						<p>
+							<img src="../images/check.jpg" style="height: 250px; width: 300px; margin-left: auto; margin-right: auto; display:block;"/>
+						</p> 
+					<![endif]-->    
+					<p class="tutorial">
+						Existen tres formas de recorrer un &aacute;rbol en profundidad: 
+						<ol class="tutorialul">
+							<li>Preorden</li>
+							<li>Inorden </li>
+							<li>Postorden</li>
+						</ol>
+					</p>
+					<p class="tutorial">
+						<img src="../images/figura1.jpg" style="height: 400px; width: 700px; margin-left: auto; margin-right: auto; display:block;"/>
+						<div align="center">Figura 1</div><p></p>
+					</p>
+					<h4>Preorden</h4>
+					<p class="tutorial">
+						El recorrido en preorden de un árbol (o subárbol) consiste en:
+					</p>
+					<ul class="tutorialul">
+							<li>Recorrer la raíz r </li>
+							<li>Desde h=hijo a la izquierda de r hasta el hijo a la derecha </li>
+							<ul> <li> Recorrer, en Preorden, el hijo h </li> </ul>
+							
+					</ul>
+
+					<p class="tutorial">
+						donde el bucle se ejecuta, obviamente, sólo en caso en que la raíz tenga hijos.
+						<p>Si se supone un esquema de un árbol como el de la siguiente figura. El recorrido en preorden consiste en recorrer la raíz(n), y después recorrer en preorden los hijos, es decir, el subárbol que cuelga de S1, el que cuelga de S2, hasta Sn </p> 
+					</p>
+					
+
+					<p class="tutorial">
+						Haciendo referencia a la figura 1, el listado del árbol sería:
+						<ul class="tutorialul">
+							<li> Pre(A1) = 1,Pre(A2), Pre(A3), Pre(A4) </li>
+							<li> Listado: 4,2,5,6,7,3,8,11,12,13,14,15,4,9,10
+						</ul>
+					</p>
+					<h4>Inorden</h4>
+					<p>
+					<p class = "tutorial">
+						<p class="tutorial">
+							El recorrido en inorden de un árbol (o subárbol) consiste en:
+							<ul class = "tutorialul">
+								<li>Recorrer en Inorden el hijo a la izquierda de la raíz,</li>
+								<li>Recorrer la raíz</li>
+								<li>Desde h = segundo hijo de r hasta el hijo a la derecha</li>
+									<ul><li>Recorrer, en Inorden, el hijo h</li></ul>
+							</ul>
+						<p class="tutorial">
+							donde el primer paso y el bucle se ejecutan, obviamente, sólo en caso en que la raíz tenga hijos.
+						</p>
+						<p class="tutorial">
+							Si suponemos el esquema de la siguiente figura. El recorrido en inorden consiste en recorrer en inorden el subárbol que cuelga de S1, recorrer la raíz(n), y después recorrer en inorden el resto de hijos, es decir, el subárbol que cuelga de S2, el que cuelga de S3, hasta Sn.
+						</p>
+						</p>
+
+						<p class="tutorial">
+						Haciendo referencia a la figura 1, el listado del árbol sería:
+						<ul class="tutorialul">
+							<li> In(A1) = In(A2),1,In(A3),In(A4) </li>
+							<li>Listado: 5,2,6,7,1,11,8,12,13,14,15,3,9,4,10</li>
+						</ul>
+					</p>
+					</p>
+					</p>
+
+
+					<h4>Postorden</h4>
+					<p>
+					<p class = "tutorial">
+						<p class="tutorial">
+							El recorrido en postorden de un árbol (o subárbol) consiste en:
+							<ul class = "tutorialul">
+								<li>Desde h=hijo izquierda de la raíz hasta el hijo a la derecha</li>
+								<ul><li>Recorrer, en Postorden, el hijo h</li></ul>
+								<li>Recorrer la raíz</li>		
+							</ul>
+						<p class="tutorial">
+							donde el bucle se ejecuta, obviamente, sólo en caso en que la raíz tenga hijos.
+						</p>
+						<p class="tutorial">
+							Si suponemos el esquema de la siguiente figura. El recorrido en postorden consiste en recorrer en postorden los hijos de n, es decir, el subárbol que cuelga de S1, el que cuelga de S2, hasta Sn, y finalmente recorrer la raíz n.
+						</p>
+						</p>
+
+						<p class="tutorial">
+						Haciendo referencia a la figura 1, el listado del árbol sería:
+						<ul class="tutorialul">
+							<li> Post(A1) = Post(A2),Post(A3),Post(A4),1 </li>
+							<li>Listado: 5,6,7,2,11,12,13,14,15,8,3,9,10,4,1</li>
+						</ul>
+					</p>
+					</p>
+					</p>
+
+
+
+					<a href="anchura.html" class="button">Siguiente<i class="icon-chevron-right"></i></a>
+				</div> 
+			</div>
+			<div id="footer_container">     
+				<div id="footer">
+					<p>P&aacute;gina creada por V&iacute;ctor Molina Alba en el semestre 2016-1, Facultad de Ingenier&iacute;a, UNAM.</p>
+				</div>
+			</div>
+		</div> 
+	</body>
+</html>
