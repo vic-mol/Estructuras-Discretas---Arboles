@@ -1,0 +1,17 @@
+
+#header_container
+{ 
+  height: 200px;
+  background: #3B3D40;
+}
+
+#header
+{ 
+  width: 940px;
+  height: 155px;
+  margin-top: 50px;
+  background: #232426;
+  border-top: 1px solid #4D5054;
+  border-left: 1px solid #4D5054;
+  border-right: 1px solid #4D5054;
+}
